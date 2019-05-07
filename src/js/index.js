@@ -69,6 +69,7 @@ const pg = (function () {
 					'counter': mathesCounter,
 					'bonus': pg.sum.bonusItems[itm.title] ? mathesCounter * itm.bonus.value : 0
 				};
+				pg.deckItems[itm.title].points += pg.sum.bonusItems[itm.title].bonus;
 			}
 		});
 
