@@ -1,0 +1,101 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport"
+				content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<link rel="stylesheet" href="build.css" />
+	</head>
+	<body>
+	
+	<div class="pg">
+		<div class="pg--items-list">
+			<pg-header>Points!</pg-header>
+			<ul class="pg--items-list-placeholder"></ul>
+		</div>
+		<div class="pg--player-desc">
+			<pg-header>Player Items</pg-header>
+			<div class="pg-deck-item--row header">
+				<div class="pg-deck-item--col-item">Item</div>
+				<div class="pg-deck-item--col-qty">Qty</div>
+				<div class="pg-deck-item--col-points">Score</div>
+			</div>
+			<ul class="pg--deck-list"></ul>
+			<div class="pg--total pg-bonus">
+				<div>Bonus:</div> <div class="pg--bonus-number"></div>
+			</div>
+			<div class="pg--total pg--total">
+				<div>Total:</div> <div class="pg--total-number"></div>
+			</div>
+			<button class="btn pg-reset">New game</button>
+		</div>
+	</div>
+
+
+	<template id="pg-header">
+		<style>
+			h1 {
+				font-size: 1.4rem;
+				letter-spacing: 1px;
+				color: #fff;
+				background: #106B03;
+				padding: .8rem;
+				margin-bottom: 1rem;
+			}
+		</style>
+		<h1></h1>
+	</template>
+
+	<template id="pg-item">
+		<style>
+			.pg-item--name {
+				font-size: 2rem;
+				font-weight: 600;
+				text-shadow: 1px 1px 0 var(--header-bg);
+				text-transform: uppercase;
+			}
+
+			.pg-item--points {
+				font-size: 10px;
+				position: absolute;
+				margin: 5px;
+			}
+		</style>
+		<div class="pg-item--name"></div>
+		<div class="pg-item--points"></div>
+	</template>
+
+	<template id="pg-deck-item">
+		<style>
+			.pg-deck-item--row {
+				display: flex;
+				align-items: center;
+				margin: 0 1em 1em;
+			}
+			.pg-deck-item--row.header {
+				font-weight: 600;
+				background: #41a932;
+				color: #fff;
+				padding: 1em;
+				margin: 0 0 1em;
+			}
+			.pg-deck-item--col-item {
+				flex: 5;
+				font-weight: 600;
+			}
+			.pg-deck-item--col-qty {
+				flex: 1
+			}
+			.pg-deck-item--col-points {
+				flex: 1;
+				text-align: right;
+			}
+		</style>
+		<div class="pg-deck-item--row">
+			<div class="pg-deck-item--col-item pg-deck-item--name"></div>
+			<div class="pg-deck-item--col-qty pg-deck-item--counter"></div>
+			<div class="pg-deck-item--col-points pg-deck-item--points"></div>
+		</div>
+	</template>
+	</body>
+</html>
