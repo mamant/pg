@@ -1,4 +1,6 @@
 # Simple game for triyng web components
 web components based
 
-For run open index.html
+** Run the app 
+<pre><code>npm i 
+npm run dev</pre></code>
